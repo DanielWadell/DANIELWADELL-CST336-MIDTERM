@@ -8,7 +8,7 @@ $("#query").on("click", function() {
                 "format":"json",
                 "jscmd": "data"}),
         success: function(response) {
-            $("#image").html("<img src=" + response["ISBN:" + $("#ISBN").val()].cover.medium + ">");
+            $("#image").html("<img src=" + response["ISBN:" + $("#ISBN").val()].cover.large + ">");
             $("#title").html("Title: " + response["ISBN:" + $("#ISBN").val()].title);
             $("#author").html("Author: " + response["ISBN:" + $("#ISBN").val()].authors[0].name);
             $("#publishedyear").html("Publish: " + response["ISBN:" + $("#ISBN").val()].publish_date);
